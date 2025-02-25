@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 .App {
   text-align: center;
 }
@@ -35,4 +38,7 @@
   to {
     transform: rotate(360deg);
   }
+}
+body{
+  background: linear-gradient(121.51deg,#e1f4f5 30.38%,#e1f4f5 53.04%,#d6ebf0 71.29%)
 }
