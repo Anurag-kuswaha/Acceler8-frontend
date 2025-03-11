@@ -6,7 +6,7 @@ const SearchByNameForm = () => {
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-        const response = await fetch(`http://localhost:8080/api/getResumeByName/${encodeURIComponent(name)}`);
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_SERVER}/api/getResumeByName/${encodeURIComponent(name)}`);
         if (!response.ok) throw new Error('No results found');
         const data = await response.json();
         setResults(data.data);

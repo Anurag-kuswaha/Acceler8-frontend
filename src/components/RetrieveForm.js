@@ -8,7 +8,7 @@ const RetrieveForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.get(`http://localhost:8080/api/getResumeById/${id}`);
+      const res = await axios.get(`${process.env.REACT_APP_BACKEND_SERVER}/api/getResumeById/${id}`);
       setResume(res.data.data);
     } catch (error) {
       setResume(null);

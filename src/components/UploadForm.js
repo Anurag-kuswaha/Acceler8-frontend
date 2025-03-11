@@ -12,7 +12,7 @@ const UploadForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:8080/api/uploadResumeDetails', form);
+      const res = await axios.post(`${process.env.REACT_APP_BACKEND_SERVER}/api/uploadResumeDetails`, form);
       console.log('res', res.data)
       setResponse(`Resume uploaded. please find you unique resume ID: ${res.data.data.id}`);
     } catch (error) {
